@@ -1,4 +1,4 @@
-#Leonardo Castrejon Angeles
+#Leonardo Castrejon Angeles y Jesus Marcelino Alavrez
 #conexion con base de datos
 import mysql.connector
 # ==========================================
