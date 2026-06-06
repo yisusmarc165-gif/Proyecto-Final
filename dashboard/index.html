@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Abarrotes El Valle | UAEMEX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Plotly.js para gráficas interactivas -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">🏪 Abarrotes El Valle</div>
+        <h1>Dashboard Gerencial de Ventas</h1>
+        <p>Sistema de Soporte a Decisiones (DSS) | UAEMEX 2026</p>
+    </header>
+
+    <main>
+        <!-- Filtros -->
+        <section class="filters">
+            <div class="filter-group">
+                <label for="sucursalFilter">Sucursal:</label>
+                <select id="sucursalFilter"><option value="all">Todas</option></select>
+            </div>
+            <div class="filter-group">
+                <label for="categoriaFilter">Categoría:</label>
+                <select id="categoriaFilter"><option value="all">Todas</option></select>
+            </div>
+            <div class="filter-group">
+                <label for="clienteFilter">Tipo Cliente:</label>
+                <select id="clienteFilter"><option value="all">Todos</option></select>
+            </div>
+        </section>
+
+        <!-- KPIs -->
+        <section class="kpi-grid" id="kpiContainer">
+            <div class="kpi-card">
+                <h3>Total Ventas</h3>
+                <p id="kpi-ventas">Cargando...</p>
+            </div>
+            <div class="kpi-card">
+                <h3>Ingresos Totales</h3>
+                <p id="kpi-ingresos">Cargando...</p>
+            </div>
+            <div class="kpi-card">
+                <h3>Margen Neto</h3>
+                <p id="kpi-margen">Cargando...</p>
+            </div>
+            <div class="kpi-card">
+                <h3>Ticket Promedio</h3>
+                <p id="kpi-ticket">Cargando...</p>
+            </div>
+        </section>
+
+        <!-- Gráficas -->
+        <section class="charts-grid">
+            <div class="chart-box">
+                <h3> Ingresos por Categoría</h3>
+                <div id="chart-cat"></div>
+            </div>
+            <div class="chart-box">
+                <h3>🏪 Ventas por Sucursal</h3>
+                <div id="chart-suc"></div>
+            </div>
+            <div class="chart-box full-width">
+                <h3>📈 Tendencia Mensual</h3>
+                <div id="chart-trend"></div>
+            </div>
+            <div class="chart-box">
+                <h3>👥 Distribución por Cliente</h3>
+                <div id="chart-cli"></div>
+            </div>
+            <div class="chart-box">
+                <h3> Margen por Zona</h3>
+                <div id="chart-zona"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto Académico | Sistemas Estratégicos | UAEMEX</p>
+        <p>Datos actualizados: <span id="lastUpdate"></span></p>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
